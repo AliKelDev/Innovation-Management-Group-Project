@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, TrendingUp, Users, Shield, Lightbulb, Target, BarChart } from 'lucide-react';
 
-// Reusable components
 const ProgressBar = ({ progress }) => (
   <div className="w-full h-1 bg-gray-200 rounded-full overflow-hidden">
     <div
@@ -18,14 +17,14 @@ const SlideContent = ({ content }) => (
 );
 
 const CardWithIcon = ({ icon: Icon, title, content, color = "blue" }) => (
-  <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-500">
-    <div className="flex items-start space-x-4">
+  <div className="bg-white p-4 md:p-6 rounded-lg shadow-md border-l-4 border-blue-500">
+    <div className="flex flex-col md:flex-row items-start space-y-3 md:space-y-0 md:space-x-4">
       <div className="p-3 bg-blue-100 rounded-lg">
         <Icon className="w-6 h-6 text-blue-500" />
       </div>
       <div>
-        <h3 className="font-semibold text-lg mb-2">{title}</h3>
-        <p className="text-gray-600">{content}</p>
+        <h3 className="font-semibold text-base md:text-lg mb-2">{title}</h3>
+        <p className="text-sm md:text-base text-gray-600">{content}</p>
       </div>
     </div>
   </div>
@@ -41,10 +40,10 @@ const Presentation = () => {
       title: "Introduction to AMUL Case Study",
       subtitle: "A Story of Rural Innovation",
       content: (
-        <div className="space-y-6">
-          <div className="bg-gradient-to-r from-blue-500/10 to-transparent p-6 rounded-lg">
-            <h2 className="text-xl font-bold mb-4 text-blue-800">Background and Context</h2>
-            <div className="grid grid-cols-2 gap-6">
+        <div className="space-y-4 md:space-y-6">
+          <div className="bg-gradient-to-r from-blue-500/10 to-transparent p-4 md:p-6 rounded-lg">
+            <h2 className="text-lg md:text-xl font-bold mb-4 text-blue-800">Background and Context</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <CardWithIcon
                 icon={Users}
                 title="Cooperative Movement"
@@ -68,14 +67,13 @@ const Presentation = () => {
             </div>
           </div>
 
-          <div className="bg-blue-50 p-6 rounded-lg">
-            <h3 className="text-lg font-semibold mb-4 text-blue-800">Three-Tier Structure</h3>
-            <div className="relative flex justify-between items-center">
-              <div className="absolute w-full h-1 bg-blue-200 top-1/2 transform -translate-y-1/2 z-0" />
+          <div className="bg-blue-50 p-4 md:p-6 rounded-lg">
+            <h3 className="text-base md:text-lg font-semibold mb-4 text-blue-800">Three-Tier Structure</h3>
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 md:space-x-4">
               {["Village Societies", "District Unions", "State Federation"].map((item, index) => (
                 <div
                   key={index}
-                  className="relative z-10 text-center p-4 bg-white rounded-lg shadow-lg w-1/4"
+                  className="relative z-10 text-center p-4 bg-white rounded-lg shadow-lg w-full md:w-1/4"
                 >
                   <div className="font-medium text-blue-600">{item}</div>
                   <div className="mt-2 text-sm text-gray-500">Level {index + 1}</div>
@@ -91,10 +89,10 @@ const Presentation = () => {
       title: "Problem Statement",
       subtitle: "Bottom of Pyramid Challenges",
       content: (
-        <div className="space-y-6">
-          <div className="bg-red-50 p-6 rounded-lg">
-            <h2 className="text-xl font-bold mb-6 text-red-800">Critical BoP Issues</h2>
-            <div className="grid grid-cols-2 gap-6">
+        <div className="space-y-4 md:space-y-6">
+          <div className="bg-red-50 p-4 md:p-6 rounded-lg">
+            <h2 className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-red-800">Critical BoP Issues</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               {[
                 {
                   title: "Rural Poverty",
@@ -119,15 +117,15 @@ const Presentation = () => {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-500"
+                  className="bg-white p-4 md:p-6 rounded-lg shadow-md border-l-4 border-blue-500"
                 >
-                  <div className="flex items-start space-x-4">
+                  <div className="flex flex-col md:flex-row items-start space-y-3 md:space-y-0 md:space-x-4">
                     <div className="p-3 bg-blue-100 rounded-lg">
                       <item.icon className="w-6 h-6 text-blue-500" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-lg">{item.title}</h3>
-                      <p className="text-gray-600 mt-1">{item.description}</p>
+                      <h3 className="font-semibold text-base md:text-lg">{item.title}</h3>
+                      <p className="text-sm md:text-base text-gray-600 mt-1">{item.description}</p>
                     </div>
                   </div>
                 </div>
@@ -142,10 +140,10 @@ const Presentation = () => {
       title: "Solution Overview",
       subtitle: "Innovative Cooperative Model",
       content: (
-        <div className="space-y-6">
-          <div className="bg-green-50 p-6 rounded-lg">
-            <h2 className="text-xl font-bold mb-6 text-green-800">Innovation Model</h2>
-            <div className="grid grid-cols-2 gap-6">
+        <div className="space-y-4 md:space-y-6">
+          <div className="bg-green-50 p-4 md:p-6 rounded-lg">
+            <h2 className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-green-800">Innovation Model</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <CardWithIcon
                 icon={Users}
                 title="Integrated Structure"
@@ -176,44 +174,44 @@ const Presentation = () => {
       title: "Impact Analysis",
       subtitle: "Multi-dimensional Impact Assessment",
       content: (
-        <div className="space-y-6">
-          <div className="bg-purple-50 p-6 rounded-lg">
-            <h2 className="text-xl font-bold mb-6 text-purple-800">Key Impact Areas</h2>
-            <div className="grid grid-cols-2 gap-6">
+        <div className="space-y-4 md:space-y-6">
+          <div className="bg-purple-50 p-4 md:p-6 rounded-lg">
+            <h2 className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-purple-800">Key Impact Areas</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-purple-700">Social Impact</h3>
-                <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-purple-500">
+                <h3 className="text-base md:text-lg font-semibold text-purple-700">Social Impact</h3>
+                <div className="bg-white p-4 md:p-6 rounded-lg shadow-md border-l-4 border-purple-500">
                   <ul className="space-y-3">
                     <li className="flex items-center">
                       <Users className="w-5 h-5 text-purple-500 mr-2" />
-                      <span>Empowerment of 3.6 million milk producers</span>
+                      <span className="text-sm md:text-base">Empowerment of 3.6 million milk producers</span>
                     </li>
                     <li className="flex items-center">
                       <Shield className="w-5 h-5 text-purple-500 mr-2" />
-                      <span>Women empowerment in dairy cooperatives</span>
+                      <span className="text-sm md:text-base">Women empowerment in dairy cooperatives</span>
                     </li>
                     <li className="flex items-center">
                       <Lightbulb className="w-5 h-5 text-purple-500 mr-2" />
-                      <span>Improved rural healthcare access</span>
+                      <span className="text-sm md:text-base">Improved rural healthcare access</span>
                     </li>
                   </ul>
                 </div>
               </div>
               <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-purple-700">Economic Impact</h3>
-                <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-purple-500">
+                <h3 className="text-base md:text-lg font-semibold text-purple-700">Economic Impact</h3>
+                <div className="bg-white p-4 md:p-6 rounded-lg shadow-md border-l-4 border-purple-500">
                   <ul className="space-y-3">
                     <li className="flex items-center">
                       <TrendingUp className="w-5 h-5 text-purple-500 mr-2" />
-                      <span>Regular income for 16.6 million producers</span>
+                      <span className="text-sm md:text-base">Regular income for 16.6 million producers</span>
                     </li>
                     <li className="flex items-center">
                       <BarChart className="w-5 h-5 text-purple-500 mr-2" />
-                      <span>Fair price mechanism implementation</span>
+                      <span className="text-sm md:text-base">Fair price mechanism implementation</span>
                     </li>
                     <li className="flex items-center">
                       <Target className="w-5 h-5 text-purple-500 mr-2" />
-                      <span>Rural employment generation</span>
+                      <span className="text-sm md:text-base">Rural employment generation</span>
                     </li>
                   </ul>
                 </div>
@@ -228,10 +226,10 @@ const Presentation = () => {
       title: "Challenges and Solutions",
       subtitle: "Overcoming Key Obstacles",
       content: (
-        <div className="space-y-6">
-          <div className="bg-orange-50 p-6 rounded-lg">
-            <h2 className="text-xl font-bold mb-6 text-orange-800">Key Challenges Addressed</h2>
-            <div className="grid gap-6">
+        <div className="space-y-4 md:space-y-6">
+          <div className="bg-orange-50 p-4 md:p-6 rounded-lg">
+            <h2 className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-orange-800">Key Challenges Addressed</h2>
+            <div className="grid grid-cols-1 gap-4 md:gap-6">
               {[
                 {
                   title: "Quality Control",
@@ -254,17 +252,17 @@ const Presentation = () => {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="bg-white p-6 rounded-lg shadow-md"
+                  className="bg-white p-4 md:p-6 rounded-lg shadow-md"
                 >
-                  <div className="flex items-start space-x-4">
+                  <div className="flex flex-col md:flex-row items-start space-y-3 md:space-y-0 md:space-x-4">
                     <div className="p-3 bg-blue-100 rounded-lg">
                       <item.icon className="w-6 h-6 text-blue-500" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-semibold text-lg text-gray-800">{item.title}</h3>
+                      <h3 className="font-semibold text-base md:text-lg text-gray-800">{item.title}</h3>
                       <div className="mt-2 space-y-2">
-                        <p className="text-red-600">Challenge: {item.challenge}</p>
-                        <p className="text-green-600">Solution: {item.solution}</p>
+                        <p className="text-sm md:text-base text-red-600">Challenge: {item.challenge}</p>
+                        <p className="text-sm md:text-base text-green-600">Solution: {item.solution}</p>
                       </div>
                     </div>
                   </div>
@@ -280,10 +278,10 @@ const Presentation = () => {
       title: "Lessons Learned and Scalability",
       subtitle: "Key Insights and Future Potential",
       content: (
-        <div className="space-y-6">
-          <div className="bg-blue-50 p-6 rounded-lg">
-            <h2 className="text-xl font-bold mb-6 text-blue-800">Key Takeaways</h2>
-            <div className="grid grid-cols-2 gap-6">
+        <div className="space-y-4 md:space-y-6">
+          <div className="bg-blue-50 p-4 md:p-6 rounded-lg">
+            <h2 className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-blue-800">Key Takeaways</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <CardWithIcon
                 icon={Users}
                 title="Ownership Model"
@@ -306,9 +304,9 @@ const Presentation = () => {
               />
             </div>
             
-            <div className="mt-8 bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-lg font-semibold text-blue-800 mb-4">Scalability Potential</h3>
-              <div className="grid grid-cols-3 gap-4">
+            <div className="mt-6 md:mt-8 bg-white p-4 md:p-6 rounded-lg shadow-md">
+              <h3 className="text-base md:text-lg font-semibold text-blue-800 mb-4">Scalability Potential</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {[
                   {
                     title: "Sector Adaptation",
