@@ -85,5 +85,5 @@ Tailwind CSS: Used for styling.
 License
 This project is open-source and available under the MIT License. Feel free to use it for your own presentations or projects!
 
-Made with ❤️ by [Your Name]
+Made with ❤️ by AliKelDev / Jordan.M
 For Innovation Management Class - Group 7
