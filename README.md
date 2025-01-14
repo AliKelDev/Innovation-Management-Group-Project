@@ -42,46 +42,6 @@ The presentation is built as a React component (`Presentation.js`). Each slide i
 
 ---
 
-## How to Run Locally
-
-If you'd like to run this project locally, follow these steps:
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/AliKelDev/Innovation-Management-Group-Project
-Navigate to the project directory:
-
-bash
-Copy
-cd ReactViteTemplate
-Install dependencies:
-
-bash
-Copy
-npm install
-Run the development server:
-
-bash
-Copy
-npm run dev
-Open your browser and visit http://localhost:3000 to view the presentation.
-
-Deployment
-The project was deployed using Netlify. To deploy your own version:
-
-Fork this repository or use your own ReactVite template.
-
-Connect your repository to Netlify.
-
-Deploy the project with a single click.
-
-Credits
-ReactVite Template: Created by AliKelDev.
-
-Lucide Icons: Used for icons in the presentation.
-
-Tailwind CSS: Used for styling.
-
 
 Made with ❤️ by AliKelDev / Jordan.M
 For Innovation Management Class - Group 7
