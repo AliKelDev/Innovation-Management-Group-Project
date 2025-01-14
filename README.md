@@ -48,7 +48,7 @@ If you'd like to run this project locally, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/AliKelDev/ReactViteTemplate.git
+   git clone https://github.com/AliKelDev/Innovation-Management-Group-Project
 Navigate to the project directory:
 
 bash
